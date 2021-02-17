@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+    php:
+        volumes:
+            - ./php/php-prod.ini:/usr/local/etc/php/conf.d/app-php-prod.ini:ro
+            - ${LOGS_PATH:-./../log}/symfony:/app/var/log
+
+    php-cron:
+        volumes:
+            - ./php/php-prod.ini:/usr/local/etc/php/conf.d/app-php-prod.ini:ro
+
+    php-consumer-worker:
+        volumes:
+            - ./php/php-prod.ini:/usr/local/etc/php/conf.d/app-php-prod.ini:ro

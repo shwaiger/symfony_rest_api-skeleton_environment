@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+    php:
+        volumes:
+            - ./php/php-dev.ini:/usr/local/etc/php/conf.d/app-php-dev.ini:ro
+        environment:
+            - PHP_IDE_CONFIG=serverName=localhost
+#
+#    php-cron:
+#        volumes:
+#            - ./php-cli/cron/php-dev.ini:/usr/local/etc/php/conf.d/app-php-dev.ini:ro
+#        environment:
+#            - PHP_IDE_CONFIG=serverName=localhost
+#
+#    php-consumer-worker:
+#        volumes:
+#            - ./php-cli/consumer-worker/php-dev.ini:/usr/local/etc/php/conf.d/app-php-dev.ini:ro
+#        environment:
+#            - PHP_IDE_CONFIG=serverName=localhost
